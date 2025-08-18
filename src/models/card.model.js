@@ -16,6 +16,9 @@ const Card = sequelize.define("card",
         description: {
             type: DataTypes.TEXT,
             allowNull: true,
+        },
+        members: {
+            type: DataTypes.ARRAY(DataTypes.UUID)
         }
     },
     {
