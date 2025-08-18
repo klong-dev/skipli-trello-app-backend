@@ -1,4 +1,6 @@
 const service = require('../services/card.service');
+const inviteService = require('../services/invite.service');
+const Service = require("../services/invite.service");
 
 const cardController = {
     findAll: async (req, res) => {
@@ -8,7 +10,7 @@ const cardController = {
     },
     findOne: async (req, res) => {
         const {boardId, id} = req.params;
-        const card = await service.findOne({boardId, id});
+        const card = await service.findOne(boardId, id);
         return res.status(200).json(card);
     },
     findByUserId: async (req, res) => {
@@ -35,6 +37,31 @@ const cardController = {
         if (card) return res.status(200).json('Card delete successfully');
         return res.status(400).json('Error deleting card');
     },
+    invite: async (req, res) => {
+        const {id} = req.params;
+        const {authorId, memberId} = req.body;
+        const invite = inviteService.sendInvite(authorId, memberId, id);
+        if (!invite) {
+            return res.status(400).json('Error creating invite');
+        }
+        res.status(200).json('Invite sent');
+    },
+    accept: async (req, res) => {
+        const {inviteId} = req.params;
+        const accept = await Service.acceptInvite(inviteId);
+        if (!accept) {
+            return res.status(400).json('Error accepting invite');
+        }
+        res.status(200).json('Accepted invite');
+    },
+    decline: async (req, res) => {
+        const {inviteId} = req.params;
+        const decline = await Service.declineInvite(inviteId);
+        if (!decline) {
+            return res.status(400).json('Error decline invite');
+        }
+        res.status(200).json('Declined invite');
+    }
 }
 
 module.exports = cardController;

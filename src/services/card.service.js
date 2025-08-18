@@ -5,7 +5,7 @@ module.exports.findAll = async (boardId) => {
     return await Card.findAll({where: {boardId}});
 }
 module.exports.findOne = async (boardId, id) => {
-    return await Card.findOne({where: {boardId, id}});
+    return await Card.findOne({where: {id}});
 }
 module.exports.findByUserId = async (boardId, userId) => {
     return await Card.findAll({

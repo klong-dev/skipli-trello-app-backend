@@ -26,5 +26,9 @@ router.delete('/:id', (req, res) => {
     return cardController.delete(req, res);
 })
 
+router.post('/:id/invite', (req, res) => {
+    return cardController.invite(req, res);
+})
+
 module.exports = router;
 
