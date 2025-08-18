@@ -23,7 +23,4 @@ const Card = sequelize.define("card",
     }
 )
 
-
-Card.belongsTo(Board)
-
 module.exports = Card;

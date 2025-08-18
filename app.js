@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 require('dotenv').config();
 var indexRouter = require('./routes/index');
+const Board = require('./src/models/board.model');
 
 const {connect} = require('./src/utils/db');
 
@@ -12,13 +13,12 @@ var app = express();
 
 
 // connect db
-connect().then();
+connect();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());

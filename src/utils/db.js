@@ -13,13 +13,16 @@ const sequelize = new Sequelize(DB_DATABASE, DB_USERNAME, DB_PASSWORD, {
     dialect: DB_TYPE,
 });
 
-connect = async () => {
-    sequelize.authenticate().then(() => {
-        console.log('DB Connected ✅');
-    }).catch((err) => {
-        console.log(err.message);
-    });
-    await sequelize.sync({alter: true});
-}
+const connect = async () => {
+    try {
+        await sequelize.authenticate();
+        console.log("✅ DB Connected");
+
+        await sequelize.sync({alter: true}); // auto sync table
+        console.log("✅ All models synced");
+    } catch (error) {
+        console.error("❌ DB Connection failed:", error.message);
+    }
+};
 
 module.exports = {sequelize, connect};
