@@ -39,8 +39,10 @@ const cardController = {
     },
     invite: async (req, res) => {
         const {id} = req.params;
-        const {authorId, memberId} = req.body;
-        const invite = inviteService.sendInvite(authorId, memberId, id);
+        const {memberId} = req.body;
+        // Get authorId from JWT token instead of request body
+        const authorId = req.user.id;
+        const invite = await inviteService.sendInvite(authorId, memberId, id);
         if (!invite) {
             return res.status(400).json('Error creating invite');
         }

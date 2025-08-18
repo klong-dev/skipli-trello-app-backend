@@ -1,7 +1,12 @@
 const express = require('express');
 const router = express.Router({mergeParams: true});
 const cardController = require('../src/controllers/card.controller');
+const taskRoutes = require('./task');
 
+// Mount task routes for a specific card
+router.use('/:id/tasks', taskRoutes);
+
+// Card routes
 router.get('/', (req, res) => {
     return cardController.findAll(req, res);
 });
@@ -31,4 +36,3 @@ router.post('/:id/invite', (req, res) => {
 })
 
 module.exports = router;
-
