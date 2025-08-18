@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const boardController = require('../src/controllers/board.controller');
+
+router.use('/:boardId/cards', require('./card'))
+
 router.get('/', (req, res) => {
     return boardController.findAll(req, res);
 });
