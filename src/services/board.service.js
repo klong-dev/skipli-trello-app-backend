@@ -13,6 +13,8 @@ module.exports.create = async (name, description) => {
 }
 
 module.exports.update = async (id, name, description) => {
+    if (!name) name = undefined;
+    if (!description) description = undefined;
     return await Board.update(
         {name, description},
         {where: {id}}
