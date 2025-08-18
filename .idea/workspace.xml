@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aee0ebf-594b-4f56-a593-dcb61a980308" name="Changes" comment="init: setup base project">
-      <change afterPath="$PROJECT_DIR$/src/models/board.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/card.model.js" afterDir="false" />
+    <list default="true" id="2aee0ebf-594b-4f56-a593-dcb61a980308" name="Changes" comment="chore: enable sync models">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/board.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/board.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/board.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/board.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/board.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +36,7 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.app.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -64,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755464123344</updated>
-      <workItem from="1755464124652" duration="9430000" />
+      <workItem from="1755464124652" duration="13527000" />
     </task>
     <task id="LOCAL-00001" summary="init: setup base project">
       <option name="closed" value="true" />
@@ -74,7 +76,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755479035692</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat(Model): create model board and card">
+      <option name="closed" value="true" />
+      <created>1755505947675</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755505947675</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore: enable sync models">
+      <option name="closed" value="true" />
+      <created>1755507572465</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1755507572465</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +100,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init: setup base project" />
-    <option name="LAST_COMMIT_MESSAGE" value="init: setup base project" />
+    <MESSAGE value="feat(Model): create model board and card" />
+    <MESSAGE value="chore: enable sync models" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: enable sync models" />
   </component>
 </project>
