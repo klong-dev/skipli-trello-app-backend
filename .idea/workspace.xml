@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aee0ebf-594b-4f56-a593-dcb61a980308" name="Changes" comment="chore: enable sync models">
+    <list default="true" id="2aee0ebf-594b-4f56-a593-dcb61a980308" name="Changes" comment="feat(JWT): added jwt for authenticate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/board.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/board.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/board.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/board.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/board.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/card.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/card.model.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="31QlLeGb49y91A2ytW2lVn1rk7l" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -32,30 +34,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Node.js.app.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.app.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.26927.40" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.27812.50" />
       </set>
     </attachedChunks>
   </component>
@@ -66,7 +68,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755464123344</updated>
-      <workItem from="1755464124652" duration="13527000" />
+      <workItem from="1755464124652" duration="27383000" />
+      <workItem from="1755583329909" duration="1899000" />
     </task>
     <task id="LOCAL-00001" summary="init: setup base project">
       <option name="closed" value="true" />
@@ -92,16 +95,117 @@
       <option name="project" value="LOCAL" />
       <updated>1755507572465</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat(Board): added crud for board">
+      <option name="closed" value="true" />
+      <created>1755520985494</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1755520985494</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat(Card): added member list to model">
+      <option name="closed" value="true" />
+      <created>1755525963156</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1755525963156</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat(Board): set board only&#10;update changed value">
+      <option name="closed" value="true" />
+      <created>1755526391396</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1755526391396</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(Board): added card routes">
+      <option name="closed" value="true" />
+      <created>1755527541730</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1755527541730</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat(Board): added card crud">
+      <option name="closed" value="true" />
+      <created>1755535279636</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1755535279636</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat(Board): added card invitation">
+      <option name="closed" value="true" />
+      <created>1755538119949</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1755538119949</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat(Task): added task model">
+      <option name="closed" value="true" />
+      <created>1755538873058</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1755538873058</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat(Task): added task assignment model">
+      <option name="closed" value="true" />
+      <created>1755538917634</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1755538917634</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat(Task): added task crud">
+      <option name="closed" value="true" />
+      <created>1755538937182</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1755538937182</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat(JWT): added jwt for authenticate">
+      <option name="closed" value="true" />
+      <created>1755538983113</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1755538983113</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init: setup base project" />
     <MESSAGE value="feat(Model): create model board and card" />
     <MESSAGE value="chore: enable sync models" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: enable sync models" />
+    <MESSAGE value="feat(Board): added crud for board" />
+    <MESSAGE value="feat(Card): added member list to model" />
+    <MESSAGE value="feat(Board): set board only&#10;update changed value" />
+    <MESSAGE value="feat(Board): added card routes" />
+    <MESSAGE value="feat(Board): added card crud" />
+    <MESSAGE value="feat(Board): added card invitation" />
+    <MESSAGE value="feat(Task): added task model" />
+    <MESSAGE value="feat(Task): added task assignment model" />
+    <MESSAGE value="feat(Task): added task crud" />
+    <MESSAGE value="feat(JWT): added jwt for authenticate" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(JWT): added jwt for authenticate" />
   </component>
 </project>

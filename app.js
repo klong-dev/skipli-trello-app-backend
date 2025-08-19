@@ -11,11 +11,12 @@ var cardRouter = require('./routes/card');
 var inviteRouter = require('./routes/invite');
 const {verifyToken} = require('./src/middleware/auth.middleware');
 const Board = require('./src/models/board.model');
+const cors = require('cors')
 
 const {connect} = require('./src/utils/db');
 
 var app = express();
-
+app.use(cors())
 
 // connect db
 connect();

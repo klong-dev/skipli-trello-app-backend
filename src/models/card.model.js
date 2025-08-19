@@ -19,6 +19,10 @@ const Card = sequelize.define("card",
         },
         members: {
             type: DataTypes.ARRAY(DataTypes.UUID)
+        },
+        status: {
+            type: DataTypes.ENUM('todo', 'doing', 'done'),
+            defaultValue: 'todo'
         }
     },
     {

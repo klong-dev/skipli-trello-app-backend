@@ -19,7 +19,6 @@ const authController = {
                 client_secret: CLIENT_SECRET,
             }
 
-            // Get access token from GitHub
             const tokenResponse = await axios.post(GITHUB_OAUTH_URL, auth_body, {
                 headers: {
                     'Accept': 'application/json'
@@ -30,7 +29,6 @@ const authController = {
                 return res.status(400).json({message: 'Failed to get access token from GitHub'});
             }
 
-            // Get user info from GitHub using the access token
             const userResponse = await axios.get(GITHUB_USER_URL, {
                 headers: {
                     'Authorization': `Bearer ${tokenResponse.data.access_token}`
@@ -39,10 +37,9 @@ const authController = {
 
             const user = userResponse.data;
 
-            // Create JWT token with user info
             const token = jwt.sign(
                 {
-                    id: user.id.toString(), // Using GitHub id as our user id
+                    id: user.id.toString(),
                     name: user.name,
                     login: user.login,
                     avatar: user.avatar_url
@@ -51,7 +48,6 @@ const authController = {
                 {expiresIn: '24h'}
             );
 
-            // Return JWT token to client
             return res.json({
                 token,
                 user: {
@@ -69,4 +65,3 @@ const authController = {
 }
 
 module.exports = authController;
-mod
