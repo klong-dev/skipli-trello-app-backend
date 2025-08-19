@@ -6,6 +6,7 @@ const GITHUB_OAUTH_URL = 'https://github.com/login/oauth/access_token'
 const GITHUB_USER_URL = 'https://api.github.com/user'
 const CLIENT_ID = process.env.GITHUB_OAUTH_CLIENT_ID;
 const CLIENT_SECRET = process.env.GITHUB_OAUTH_CLIENT_SECRET;
+const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:3000';
 const JWT_SECRET = process.env.JWT_SECRET || 'skipli-board-management-secret';
 
 const authController = {
@@ -48,7 +49,7 @@ const authController = {
                 {expiresIn: '24h'}
             );
 
-            return res.json({
+            const userData = {
                 token,
                 user: {
                     id: user.id.toString(),
@@ -56,7 +57,12 @@ const authController = {
                     login: user.login,
                     avatar: user.avatar_url
                 }
-            });
+            };
+
+            const redirectUrl = new URL(`${CLIENT_URL}/github/oauth`);
+            redirectUrl.searchParams.append('data', encodeURIComponent(JSON.stringify(userData)));
+
+            return res.redirect(redirectUrl.toString());
         } catch (error) {
             console.error('GitHub OAuth error:', error);
             return res.status(500).json({message: 'Authentication failed'});

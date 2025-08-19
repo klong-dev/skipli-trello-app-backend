@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aee0ebf-594b-4f56-a593-dcb61a980308" name="Changes" comment="feat(JWT): added jwt for authenticate">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/card.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/card.model.js" afterDir="false" />
-    </list>
+    <list default="true" id="2aee0ebf-594b-4f56-a593-dcb61a980308" name="Changes" comment="feat: enable cors" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1755464123344</updated>
       <workItem from="1755464124652" duration="27383000" />
-      <workItem from="1755583329909" duration="1899000" />
+      <workItem from="1755583329909" duration="2047000" />
     </task>
     <task id="LOCAL-00001" summary="init: setup base project">
       <option name="closed" value="true" />
@@ -175,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755538983113</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat: enable cors">
+      <option name="closed" value="true" />
+      <created>1755585643005</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1755585643005</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +207,7 @@
     <MESSAGE value="feat(Task): added task assignment model" />
     <MESSAGE value="feat(Task): added task crud" />
     <MESSAGE value="feat(JWT): added jwt for authenticate" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(JWT): added jwt for authenticate" />
+    <MESSAGE value="feat: enable cors" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: enable cors" />
   </component>
 </project>
