@@ -1,4 +1,3 @@
-// filepath: c:\Users\user\Desktop\WebStorm\SkipliBoardManagement\src\services\task.service.js
 const Task = require('../models/task.model');
 const TaskAssignment = require('../models/taskAssignment.model');
 const Card = require('../models/card.model');

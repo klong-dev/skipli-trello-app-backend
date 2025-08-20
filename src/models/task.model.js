@@ -1,4 +1,3 @@
-// filepath: c:\Users\user\Desktop\WebStorm\SkipliBoardManagement\src\models\task.model.js
 const {DataTypes} = require('sequelize');
 const {sequelize} = require("../utils/db");
 const Card = require("./card.model");
